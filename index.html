@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>EML Soluciones Tecnológicas - Soporte Técnico Profesional</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&amp;family=Inter:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "outline-variant": "#414754",
+                        "on-primary-fixed-variant": "#004397",
+                        "error": "#ffb4ab",
+                        "primary-fixed": "#d8e2ff",
+                        "on-secondary-fixed": "#001f25",
+                        "on-tertiary-container": "#fffeff",
+                        "on-surface-variant": "#c1c6d7",
+                        "surface": "#10131b",
+                        "secondary-fixed-dim": "#00daf8",
+                        "surface-variant": "#32353d",
+                        "on-tertiary-fixed-variant": "#7d2d00",
+                        "on-background": "#e0e2ed",
+                        "on-primary-container": "#ffffff",
+                        "inverse-primary": "#0059c5",
+                        "on-error-container": "#ffdad6",
+                        "primary-container": "#0070f3",
+                        "tertiary-container": "#ca4e00",
+                        "on-primary": "#002e6b",
+                        "on-tertiary": "#581e00",
+                        "inverse-on-surface": "#2d3039",
+                        "primary-fixed-dim": "#aec6ff",
+                        "on-tertiary-fixed": "#360f00",
+                        "primary": "#aec6ff",
+                        "surface-tint": "#aec6ff",
+                        "surface-container-lowest": "#0b0e15",
+                        "secondary": "#b9f1ff",
+                        "outline": "#8b90a0",
+                        "surface-container-low": "#181b23",
+                        "inverse-surface": "#e0e2ed",
+                        "background": "#10131b",
+                        "on-error": "#690005",
+                        "tertiary-fixed-dim": "#ffb596",
+                        "on-surface": "#e0e2ed",
+                        "on-secondary-fixed-variant": "#004e5a",
+                        "on-secondary": "#00363f",
+                        "error-container": "#93000a",
+                        "surface-container-high": "#272a32",
+                        "tertiary": "#ffb596",
+                        "surface-container": "#1c1f27",
+                        "surface-dim": "#10131b",
+                        "tertiary-fixed": "#ffdbcd",
+                        "secondary-container": "#00e0ff",
+                        "surface-container-highest": "#32353d",
+                        "on-primary-fixed": "#001a43",
+                        "on-secondary-container": "#005f6d",
+                        "surface-bright": "#363942",
+                        "secondary-fixed": "#a5eeff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "margin-desktop": "64px",
+                        "margin-mobile": "20px",
+                        "base": "8px",
+                        "gutter": "24px",
+                        "container-max": "1280px"
+                    },
+                    "fontFamily": {
+                        "headline-md": ["Geist"],
+                        "body-md": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "display-lg-mobile": ["Geist"],
+                        "display-lg": ["Geist"],
+                        "label-sm": ["Geist"]
+                    },
+                    "fontSize": {
+                        "headline-md": ["24px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                        "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "display-lg-mobile": ["32px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                        "display-lg": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "label-sm": ["12px", {"lineHeight": "1.0", "letterSpacing": "0.05em", "fontWeight": "500"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            background-color: #10131b;
+            color: #e0e2ed;
+            -webkit-font-smoothing: antialiased;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-card {
+            background: rgba(28, 31, 39, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        .glow-blue {
+            box-shadow: 0 0 20px rgba(0, 112, 243, 0.2);
+        }
+        .hero-gradient {
+            background: radial-gradient(circle at top right, rgba(0, 112, 243, 0.15), transparent 60%);
+        }
+        input:focus, textarea:focus {
+            outline: none;
+            border-color: #aec6ff !important;
+            box-shadow: 0 0 0 1px #aec6ff;
+        }
+    </style>
+</head>
+<body class="font-body-md overflow-x-hidden">
+<!-- Top Navigation Anchor -->
+<header class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-md border-b border-outline-variant/30">
+<div class="flex justify-between items-center px-margin-mobile md:px-margin-desktop h-20 max-w-container-max mx-auto">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-headline-md" data-icon="memory">memory</span>
+<span class="font-headline-md text-headline-md font-bold text-on-surface tracking-tight">EML Soluciones</span>
+</div>
+<a class="hidden md:flex bg-primary-container text-on-primary-container px-6 py-2 rounded-full font-label-sm hover:opacity-90 transition-opacity items-center gap-2" href="https://wa.me/3804100986">
+                Contact Us
+                <span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span>
+</a>
+<!-- Mobile Menu Toggle (Simplified) -->
+<button class="md:hidden text-on-surface">
+<span class="material-symbols-outlined" data-icon="menu">menu</span>
+</button>
+</div>
+</header>
+<main class="pt-20">
+<!-- Hero Section -->
+<section class="relative min-h-[90vh] flex flex-col justify-center hero-gradient px-margin-mobile md:px-margin-desktop py-12">
+<div class="max-w-container-max mx-auto grid grid-cols-1 lg:grid-cols-2 gap-gutter items-center">
+<div class="z-10 space-y-6">
+<div class="inline-flex items-center gap-2 bg-primary-container/10 border border-primary/20 px-3 py-1 rounded-full">
+<span class="w-2 h-2 rounded-full bg-secondary-container animate-pulse"></span>
+<span class="text-primary font-label-sm uppercase">Servicio Técnico Especializado</span>
+</div>
+<h1 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-on-surface">
+                        EML Soluciones Tecnológicas
+                    </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl">
+                        Soporte técnico para PC y notebooks. Soluciones informáticas para hogares y pequeños negocios.
+                    </p>
+<div class="flex flex-col sm:flex-row gap-4 pt-4">
+<a class="flex items-center justify-center gap-2 bg-primary-container text-on-primary-container px-8 py-4 rounded-xl font-headline-md hover:scale-[1.02] transition-transform glow-blue" href="https://wa.me/3804100986">
+<span class="material-symbols-outlined" data-icon="chat">chat</span>
+                            Contactar por WhatsApp
+                        </a>
+<a class="flex items-center justify-center gap-2 border border-outline px-8 py-4 rounded-xl font-headline-md text-on-surface hover:bg-surface-container transition-colors" href="#contact">
+                            Solicitar asesoramiento
+                        </a>
+</div>
+</div>
+<div class="relative hidden lg:block">
+                    <img alt="EML Soluciones Tecnológicas" class="w-full h-auto rounded-3xl object-cover" src="assets/logo.jpeg"/>
+<!-- Tech Floaties (Visual Decoration) -->
+<div class="absolute -top-6 -right-6 w-32 h-32 glass-card rounded-full flex items-center justify-center animate-bounce">
+<span class="material-symbols-outlined text-primary text-4xl" data-icon="shield">shield</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Services Section (Bento Grid Style) -->
+<section class="py-24 px-margin-mobile md:px-margin-desktop bg-surface-container-lowest">
+<div class="max-w-container-max mx-auto">
+<div class="text-center mb-16 space-y-4">
+<h2 class="font-display-lg-mobile text-display-lg-mobile text-on-surface">Nuestros Servicios</h2>
+<div class="h-1 w-20 bg-primary mx-auto"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+<!-- Service 1 -->
+<div class="glass-card p-8 rounded-2xl hover:border-primary/50 transition-colors group">
+<div class="w-14 h-14 bg-primary-container/20 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="laptop_mac">laptop_mac</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-3">Soporte técnico para PC y notebooks</h3>
+<p class="text-on-surface-variant">Reparación integral de hardware y software para todo tipo de computadoras.</p>
+</div>
+<!-- Service 2 -->
+<div class="glass-card p-8 rounded-2xl hover:border-primary/50 transition-colors group">
+<div class="w-14 h-14 bg-primary-container/20 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="speed">speed</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-3">Optimización de equipos</h3>
+<p class="text-on-surface-variant">Aceleramos tu PC para que funcione como el primer día, sin demoras.</p>
+</div>
+<!-- Service 3 -->
+<div class="glass-card p-8 rounded-2xl hover:border-primary/50 transition-colors group">
+<div class="w-14 h-14 bg-primary-container/20 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="pest_control">pest_control</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-3">Eliminación de virus y malware</h3>
+<p class="text-on-surface-variant">Limpieza profunda y protección contra amenazas digitales.</p>
+</div>
+<!-- Service 4 -->
+<div class="glass-card p-8 rounded-2xl hover:border-primary/50 transition-colors group">
+<div class="w-14 h-14 bg-primary-container/20 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="settings">settings</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-3">Instalación de software</h3>
+<p class="text-on-surface-variant">Configuración de sistemas operativos, paquetes office y software profesional.</p>
+</div>
+<!-- Service 5 -->
+<div class="glass-card p-8 rounded-2xl hover:border-primary/50 transition-colors group">
+<div class="w-14 h-14 bg-primary-container/20 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="wifi">wifi</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-3">Redes e Internet WiFi</h3>
+<p class="text-on-surface-variant">Mejora de cobertura WiFi y configuración de redes locales estables.</p>
+</div>
+<!-- Service 6 -->
+<div class="glass-card p-8 rounded-2xl hover:border-primary/50 transition-colors group">
+<div class="w-14 h-14 bg-primary-container/20 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="backup">backup</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-3">Backup y recuperación</h3>
+<p class="text-on-surface-variant">Protección de tus datos importantes y recuperación de archivos perdidos.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Why Us Section -->
+<section class="py-24 px-margin-mobile md:px-margin-desktop bg-surface">
+<div class="max-w-container-max mx-auto flex flex-col md:flex-row items-center gap-16">
+<div class="md:w-1/2">
+<h2 class="font-display-lg-mobile text-display-lg-mobile text-on-surface mb-8">¿Por qué elegirnos?</h2>
+<ul class="space-y-6">
+<li class="flex items-start gap-4">
+<span class="material-symbols-outlined text-secondary-container mt-1" data-icon="verified">verified</span>
+<div>
+<h4 class="font-headline-md text-on-surface">Atención personalizada</h4>
+<p class="text-on-surface-variant">Escuchamos tus necesidades para brindarte la mejor solución.</p>
+</div>
+</li>
+<li class="flex items-start gap-4">
+<span class="material-symbols-outlined text-secondary-container mt-1" data-icon="search_check">search_check</span>
+<div>
+<h4 class="font-headline-md text-on-surface">Diagnóstico transparente</h4>
+<p class="text-on-surface-variant">Explicaciones claras, sin tecnicismos innecesarios.</p>
+</div>
+</li>
+<li class="flex items-start gap-4">
+<span class="material-symbols-outlined text-secondary-container mt-1" data-icon="bolt">bolt</span>
+<div>
+<h4 class="font-headline-md text-on-surface">Soluciones rápidas</h4>
+<p class="text-on-surface-variant">Sabemos que tu tiempo es valioso, trabajamos con agilidad.</p>
+</div>
+</li>
+</ul>
+</div>
+<div class="md:w-1/2 grid grid-cols-2 gap-4">
+<div class="bg-surface-container-high p-8 rounded-3xl text-center">
+<span class="material-symbols-outlined text-4xl text-primary block mb-2" data-icon="distance">distance</span>
+<span class="font-label-sm uppercase text-primary">Soporte Remoto</span>
+</div>
+<div class="bg-primary-container p-8 rounded-3xl text-center text-on-primary-container">
+<span class="material-symbols-outlined text-4xl block mb-2" data-icon="home_repair_service" style="font-variation-settings: 'FILL' 1;">home_repair_service</span>
+<span class="font-label-sm uppercase">Presencial</span>
+</div>
+<div class="col-span-2 bg-surface-container-highest p-8 rounded-3xl flex items-center justify-between">
+<div>
+<span class="text-display-lg-mobile text-primary font-bold">10+</span>
+<p class="text-on-surface-variant">Años de Experiencia</p>
+</div>
+<span class="material-symbols-outlined text-5xl text-outline-variant" data-icon="engineering">engineering</span>
+</div>
+</div>
+</div>
+</section>
+<!-- About Me Section -->
+<section class="py-24 px-margin-mobile md:px-margin-desktop bg-surface-container-low overflow-hidden">
+<div class="max-w-container-max mx-auto flex flex-col lg:flex-row gap-16 items-center">
+<div class="w-64 h-64 md:w-80 md:h-80 relative shrink-0">
+<div class="absolute inset-0 border-2 border-primary rounded-full scale-110 border-dashed animate-spin-slow"></div>
+                    <img alt="Emiliano Peralta" class="w-full h-full object-cover rounded-full border-4 border-surface shadow-2xl" src="assets/foto-mia.jpeg"/>
+</div>
+<div class="flex-1 space-y-6 text-center lg:text-left">
+<h2 class="font-display-lg-mobile text-display-lg-mobile text-on-surface">Sobre Mí</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant">
+                        Soy <strong class="text-primary">Emiliano Peralta</strong>, Técnico en Informática. Ayudo a personas y pequeños negocios a resolver problemas tecnológicos de manera rápida y confiable. Mi misión es que la tecnología sea una herramienta a tu favor, no un obstáculo.
+                    </p>
+<div class="flex flex-wrap gap-3 justify-center lg:justify-start">
+<span class="bg-surface p-2 px-4 rounded-full border border-outline-variant text-label-sm">Hardware Expert</span>
+<span class="bg-surface p-2 px-4 rounded-full border border-outline-variant text-label-sm">Network Specialist</span>
+<span class="bg-surface p-2 px-4 rounded-full border border-outline-variant text-label-sm">Software Setup</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Contact Section -->
+<section class="py-24 px-margin-mobile md:px-margin-desktop bg-surface relative" id="contact">
+<div class="max-w-container-max mx-auto">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+<div>
+<h2 class="font-display-lg-mobile text-display-lg-mobile text-on-surface mb-8">Hablemos</h2>
+<div class="space-y-8">
+<div class="flex items-center gap-6">
+<div class="w-16 h-16 bg-primary-container/20 rounded-full flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-3xl" data-icon="call">call</span>
+</div>
+<div>
+<p class="text-on-surface-variant font-label-sm uppercase">WhatsApp</p>
+<p class="font-headline-md text-on-surface">3804100986</p>
+</div>
+</div>
+<div class="flex items-center gap-6">
+<div class="w-16 h-16 bg-primary-container/20 rounded-full flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-3xl" data-icon="location_on">location_on</span>
+</div>
+<div>
+<p class="text-on-surface-variant font-label-sm uppercase">Ubicación</p>
+<p class="font-headline-md text-on-surface">La Rioja Capital</p>
+</div>
+</div>
+</div>
+</div>
+            <div class="glass-card p-8 rounded-3xl flex flex-col items-center justify-center space-y-6">
+<a href="https://wa.me/5493804100986?text=Hola%2C%20vi%20tu%20p%C3%A1gina%20y%20quisiera%20realizar%20una%20consulta." class="w-full bg-primary-container text-on-primary-container py-4 rounded-xl font-headline-md hover:brightness-110 transition-all glow-blue flex items-center justify-center gap-2">
+<span class="material-symbols-outlined" data-icon="chat">chat</span>
+Enviar mensaje por WhatsApp
+</a>
+<p class="text-on-surface-variant text-sm text-center">También podés escribirnos al 3804100986</p>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer Anchor -->
+<footer class="w-full py-12 border-t border-outline-variant/20 bg-surface-container-lowest px-margin-mobile md:px-margin-desktop">
+<div class="max-w-container-max mx-auto flex flex-col md:flex-row justify-between items-center gap-base">
+<div class="text-center md:text-left">
+<div class="flex items-center gap-2 justify-center md:justify-start mb-2">
+<span class="material-symbols-outlined text-primary" data-icon="memory">memory</span>
+<span class="font-headline-md text-on-surface">EML Soluciones Tecnológicas</span>
+</div>
+<p class="text-on-surface-variant text-body-md">La Rioja, Argentina</p>
+</div>
+<div class="flex gap-6">
+<a class="text-on-surface-variant hover:text-primary transition-colors flex items-center gap-2" href="https://wa.me/3804100986">
+<span class="material-symbols-outlined" data-icon="chat">chat</span>
+                    WhatsApp
+                </a>
+<a class="text-on-surface-variant hover:text-primary transition-colors flex items-center gap-2" href="#">
+<span class="material-symbols-outlined" data-icon="facebook">social_leaderboard</span>
+                    Facebook
+                </a>
+</div>
+<p class="text-on-surface-variant text-body-md">
+                © 2026 EML Soluciones Tecnológicas. All rights reserved.
+            </p>
+</div>
+</footer>
+<style>
+        @keyframes spin-slow {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        .animate-spin-slow {
+            animation: spin-slow 20s linear infinite;
+        }
+    </style>
+<script>
+        // Micro-interactions
+        document.querySelectorAll('.glass-card').forEach(card => {
+            card.addEventListener('mousemove', (e) => {
+                const { left, top, width, height } = card.getBoundingClientRect();
+                const x = (e.clientX - left) / width;
+                const y = (e.clientY - top) / height;
+                
+                card.style.setProperty('--mouse-x', x);
+                card.style.setProperty('--mouse-y', y);
+            });
+        });
+    </script>
+</body></html>

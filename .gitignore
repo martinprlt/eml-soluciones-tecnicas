@@ -1,0 +1,15 @@
+# Git ignore
+.git
+.vscode
+*.log
+*.tmp
+*.bak
+*.orig
+*.rej
+*.diff
+*.patch
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
